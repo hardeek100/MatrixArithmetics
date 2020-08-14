@@ -28,7 +28,7 @@ class text2base:
             c = 3
         else:
             c = 2
-        print(c)
+            
         for i in range(c, len(self.text)+c, c):
             t = int(self.text[i-c:i])
             d = p = 0
@@ -38,16 +38,15 @@ class text2base:
                     t = t//10
             decryptedText += chr(d)
         return decryptedText
-        
-            
-        
 
-j = 2
-for i in range(2, 1001):
-    c = "A"
-    j += 1
-    x = text2base(c, i)
-    y = text2base(c,j)
-    print(f"Ascii of:{c}  Encrypted: {x.encrypt()} {i} {len(x.encrypt())}")
-    if(x.encrypt() == y.encrypt()):
-        break;
+
+x = text2base("Hello World!", 2)
+print(x.encrypt())
+# Output: 100100011001011101100110110011011110100000101011111011111110010110110011001000100001
+
+print()
+
+y = text2base(x.encrypt(), 2)
+print(y.decrypt())
+#Output: Hello World!
+        
