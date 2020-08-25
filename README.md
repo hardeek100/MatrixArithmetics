@@ -1,5 +1,5 @@
 # Python-Scripts
-Python scripts that I wrote in my free time.
+Python scripts I wrote in my free time.
 
 
 Text2Base:
